@@ -1,0 +1,19 @@
+<html>
+<head>
+    <title>Form</title>
+</head>
+<body>
+    <h1>Predict Salary Analysis</h1>
+        <form action="{{ url_for('predict')}}" method="post">
+            <input type="text" name="exp" placeholder="Experience" required='required' />
+            <input type="number" name="test_score" placeholder="Test Score" required='required' />
+            <input type="number" name="interview_score" placeholder="Interview Score" required='required' />
+
+            <button type="submit">Predict</button>
+        </form>
+        
+        <br>
+        <br>
+        {{ prediction_text }}
+</body>
+</html>
